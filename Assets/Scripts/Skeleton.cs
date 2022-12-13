@@ -24,10 +24,15 @@ public class Skeleton : MonoBehaviour
     public bool dashing = false;
     public int lookingRight = 1;
     public bool dashShadow = false;
+    public bool takeDamage = false;
     public bool dead = false;
-    public bool activating = false;
-    public float activateTime;
+    public bool crouch = false;
+    public bool crouching = false;
+    public bool canGetUp = true;
     public bool gravity = false;
+    public bool attack = false;
+    public bool attacking = false;
+    public bool storedAttack = false;
     public bool waiting;
     public AudioClip jumpClip;
     public AudioClip dashClip;
@@ -39,7 +44,7 @@ public class Skeleton : MonoBehaviour
         {
             input = new PlayerInputComponent();
             physics = new NormalPhysicsComponent();
-            //graphics = new MariDomingiGraphicsComponent();
+            graphics = new MariDomingiGraphicsComponent();
         }
         else
         {
@@ -51,7 +56,7 @@ public class Skeleton : MonoBehaviour
     void Update()
     {
         input.Update(this);
-        //graphics.Update(this);
+        graphics.Update(this);
     }
     private void FixedUpdate()
     {
@@ -104,37 +109,68 @@ public class Skeleton : MonoBehaviour
         dash = false;
     }
 
+    public void Crouch()
+    {
+        crouch = true;
+    }
+    public void EndCrouch()
+    {
+        crouch = false;
+    }
+    public void Crouching()
+    {
+        crouching = true;
+    }
+    public void EndCrouching()
+    {
+        crouching = false;
+    }
     public void StopDashing()
     {
         dashing = false;
     }
 
+    public void StartDamage()
+    {
+        takeDamage = true;
+    }
+
+    public void EndDamage()
+    {
+        takeDamage = false;
+    }
+    public void StartAttack()
+    {
+        attack = true;
+        storedAttack = true;
+    }
+
+    public void EndAttack()
+    {
+        attack = false;
+    }
+
+    public void StartAttacking()
+    {
+        attacking = true;
+        storedAttack = false;
+    }
+
+    public void EndAttacking()
+    {
+        attacking = false;
+    }
+    //Function to set the canGetUp boolean
+    public void SetCanGetUp(bool g)
+    {
+        canGetUp = g;
+    }
     //Function to kill the skeleton
     public void Die()
     {
         dead = true;
     }
 
-    //Function to activate a new follower, saving the time it was activated
-    public void ActivateFollower()
-    {
-        if (!isPlayer)
-        {
-            activateTime = Time.fixedTime;
-            activating = true;
-        }
-    }
-
-    //Function to deactivate the follower. We change the alpha to make it invisible but we don't destroy it.
-    public void DectivateFollower()
-    {
-        if (!isPlayer)
-        {
-            activating = false;
-            GetComponent<SpriteRenderer>().color = new Color(GetComponent<SpriteRenderer>().color.r, GetComponent<SpriteRenderer>().color.g, GetComponent<SpriteRenderer>().color.b, 0.0f);
-            transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = false;
-        }
-    }
 
     //A function to create shadows when a skeleton dashes
     public void CreateDashShadow()

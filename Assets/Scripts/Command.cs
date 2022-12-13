@@ -69,3 +69,34 @@ public class StopDashCommand : Command
         gameObject.EndDash();
     }
 }
+
+public class AttackCommand : Command
+{
+    public override void Execute(Skeleton gameObject)
+    {
+        gameObject.StartAttack();
+    }
+}
+
+public class StopAttackCommand : Command
+{
+    public override void Execute(Skeleton gameObject)
+    {
+        gameObject.EndAttack();
+    }
+}
+public class CrouchCommand : Command
+{
+    public override void Execute(Skeleton gameObject)
+    {
+        gameObject.Crouch();
+    }
+}
+
+public class StopCrouchCommand : Command
+{
+    public override void Execute(Skeleton gameObject)
+    {
+        gameObject.EndCrouch();
+    }
+}

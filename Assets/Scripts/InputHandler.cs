@@ -21,11 +21,17 @@ public class InputHandler : MonoBehaviour
     private string jumpRelease;
     private string dashPress;
     private string dashRelease;
+    private string attackPress;
+    private string attackRelease;
+    private string crouchPress;
+    private string crouchRelease;
     //The keycodes of the 4 movement commands
     private KeyCode moveLeftKey;
     private KeyCode moveRightKey;
     private KeyCode jumpKey;
     private KeyCode dashKey;
+    private KeyCode attackKey;
+    private KeyCode crouchKey;
 
     private void Start()
     {
@@ -34,6 +40,8 @@ public class InputHandler : MonoBehaviour
         if (!PlayerPrefs.HasKey("jump")) PlayerPrefs.SetString("jump", "Space");
         if (!PlayerPrefs.HasKey("dash")) PlayerPrefs.SetString("dash", "Mouse1");
         if (!PlayerPrefs.HasKey("pause")) PlayerPrefs.SetString("pause", "Escape");
+        if (!PlayerPrefs.HasKey("attack")) PlayerPrefs.SetString("attack", "Mouse0");
+        if (!PlayerPrefs.HasKey("crouch")) PlayerPrefs.SetString("crouch", "S");
         //We save the strings that will be connected to the commands
         moveLeftPress = PlayerPrefs.GetString("moveLeft") + "ButtonPress";
         moveLeftRelease = PlayerPrefs.GetString("moveLeft") + "ButtonRelease";
@@ -43,6 +51,10 @@ public class InputHandler : MonoBehaviour
         jumpRelease = PlayerPrefs.GetString("jump") + "ButtonRelease";
         dashPress = PlayerPrefs.GetString("dash") + "ButtonPress";
         dashRelease = PlayerPrefs.GetString("dash") + "ButtonRelease";
+        attackPress = PlayerPrefs.GetString("attack") + "ButtonPress";
+        attackRelease = PlayerPrefs.GetString("attack") + "ButtonRelease";
+        crouchPress = PlayerPrefs.GetString("crouch") + "ButtonPress";
+        crouchRelease = PlayerPrefs.GetString("crouch") + "ButtonRelease";
         //We add to the dictionary the strings with their connected command.
         keys.Add(moveLeftPress, new MoveLeftCommand());
         keys.Add(moveLeftRelease, new StopMoveLeftCommand());
@@ -52,11 +64,17 @@ public class InputHandler : MonoBehaviour
         keys.Add(jumpRelease, new StopJumpCommand());
         keys.Add(dashPress, new DashCommand());
         keys.Add(dashRelease, new StopDashCommand());
+        keys.Add(attackPress, new AttackCommand());
+        keys.Add(attackRelease, new StopAttackCommand());
+        keys.Add(crouchPress, new CrouchCommand());
+        keys.Add(crouchRelease, new StopCrouchCommand());
         //Using refraction, we save the keycodes that will activate the commands
         moveLeftKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("moveLeft"));
         moveRightKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("moveRight"));
         jumpKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("jump"));
         dashKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("dash"));
+        attackKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("attack"));
+        crouchKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("crouch"));
     }
     //We save a maximum of 10 commands that will be sent every 1/50 seconds
     public void HandleInput()
@@ -101,6 +119,26 @@ public class InputHandler : MonoBehaviour
             if (Input.GetKeyUp(dashKey))
             {
                 commands[totalCommands] = keys[dashRelease];
+                totalCommands++;
+            }
+            if (Input.GetKeyDown(attackKey))
+            {
+                commands[totalCommands] = keys[attackPress];
+                totalCommands++;
+            }
+            if (Input.GetKeyUp(attackKey))
+            {
+                commands[totalCommands] = keys[attackRelease];
+                totalCommands++;
+            }
+            if (Input.GetKeyDown(crouchKey))
+            {
+                commands[totalCommands] = keys[crouchPress];
+                totalCommands++;
+            }
+            if (Input.GetKeyUp(crouchKey))
+            {
+                commands[totalCommands] = keys[crouchRelease];
                 totalCommands++;
             }
         }

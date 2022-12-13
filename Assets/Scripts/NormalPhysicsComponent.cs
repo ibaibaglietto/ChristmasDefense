@@ -40,11 +40,21 @@ public class NormalPhysicsComponent : PhysicsComponent
                     canDash = true;
                 }
             }
+            //We save when the skeleton can get up
+            gameObject.SetCanGetUp(true);
+            colliders = Physics2D.OverlapCircleAll(gameObject.transform.GetChild(1).position, k_GroundedRadius, m_WhatIsGround);
+            for (int i = 0; i < colliders.Length; i++)
+            {
+                if (colliders[i].gameObject != gameObject)
+                {
+                    gameObject.SetCanGetUp(false);
+                }
+            }
             //We change the gravity to make the skeleton fall faster when the player isn't pressing the jump button
             if (gameObject.gravity) gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
             else gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
-            //We only jump if the skeleton is in the ground
-            if (gameObject.jump && m_Grounded)
+            //We only jump if the skeleton is in the ground and it isn't crouching nor attacking
+            if (gameObject.jump && m_Grounded && !gameObject.crouching && !gameObject.attacking)
             {
                 m_Grounded = false;
                 velY = 8.0f;
@@ -56,10 +66,12 @@ public class NormalPhysicsComponent : PhysicsComponent
                 gameObject.falling = true;
                 m_Grounded = false;
             }
+            //When the skeleton is attacking or crouching we don't move it in x
+            if (gameObject.attacking || gameObject.crouching) velX = 0.0f;
             //We save the velocity that we calculated
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(velX, velY);
             //We only dash if the time has passed and the skeleton hasn't dashed this jump
-            if (gameObject.dash && canDash && (Time.fixedTime - lastDash) > 0.5f)
+            if (gameObject.dash && !gameObject.attacking && canDash && (Time.fixedTime - lastDash) > 0.5f)
             {
                 gameObject.dashing = true;
                 lastDash = Time.fixedTime;

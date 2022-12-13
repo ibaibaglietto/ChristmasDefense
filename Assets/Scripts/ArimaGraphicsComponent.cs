@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 //We will use the state pattern to create a state machine for the graphics component
-public class MariDomingiGraphicsComponent : GraphicsComponent
+public class ArimaGraphicsComponent : GraphicsComponent
 {
     //The states of the state machine that we will follow
     enum State
@@ -377,7 +377,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                 }
                 break;
             case State.STATE_DASHING_RIGHT:
-                if (gameObject.GetComponent<SpriteRenderer>().color.a > 0.1f) gameObject.CreateDashShadow();
+                //if (gameObject.GetComponent<SpriteRenderer>().color.a > 0.1f) gameObject.CreateDashShadow();
                 if (gameObject.dead)
                 {
                     if (gameObject.isPlayer)
@@ -400,7 +400,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                 }
                 break;
             case State.STATE_DASHING_LEFT:
-                if(gameObject.GetComponent<SpriteRenderer>().color.a > 0.1f) gameObject.CreateDashShadow();
+                //if(gameObject.GetComponent<SpriteRenderer>().color.a > 0.1f) gameObject.CreateDashShadow();
                 if (gameObject.dead)
                 {
                     if (gameObject.isPlayer)
@@ -422,17 +422,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     state = State.STATE_IDLE_LEFT;
                 }
                 break;
-        }
-        //When the follower is being activated we change the alpha according to the time and when it is fully visible we enable the hitbox that can kill the player.
-        if (gameObject.activating)
-        {
-            if(Time.fixedTime - gameObject.activateTime < 1.0f) gameObject.GetComponent<SpriteRenderer>().color = new Color(0.05f, 0.2f, 0.1f, Time.fixedTime - gameObject.activateTime);
-            else
-            {
-                gameObject.transform.GetChild(1).GetComponent<BoxCollider2D>().enabled = true;
-                gameObject.GetComponent<SpriteRenderer>().color = new Color(0.4f, 1.0f, 0.6f, 1.0f);
-                gameObject.activating = false;
-            }
         }
     }
 
