@@ -56,7 +56,17 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("takeDamage", true);
                     state = State.STATE_HURTING_RIGHT;
                 }
-                else if (gameObject.crouch) 
+                else if (gameObject.dashing && !gameObject.waiting)
+                {
+                    if (gameObject.isPlayer)
+                    {
+                        gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
+                        gameObject.GetComponent<AudioSource>().Play();
+                    }
+                    gameObject.GetComponent<Animator>().SetBool("isDashing", true);
+                    state = State.STATE_DASHING_RIGHT;
+                }
+                else if (gameObject.crouch && !gameObject.onAir) 
                 {
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", true);
                     gameObject.Crouching();
@@ -67,17 +77,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isAttacking", true);
                     gameObject.StartAttacking();
                     state = State.STATE_ATTACKING1_RIGHT;
-                }
-                else if (gameObject.dashing && !gameObject.waiting)
-                {
-                    if (gameObject.isPlayer)
-                    {
-                        gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
-                        gameObject.GetComponent<AudioSource>().Play();
-                    }
-                    gameObject.GetComponent<Animator>().SetBool("isDashing", true);
-                    state = State.STATE_DASHING_RIGHT;
-
                 }
                 else if (gameObject.jump && !gameObject.waiting)
                 {
@@ -124,18 +123,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("takeDamage", true);
                     state = State.STATE_HURTING_LEFT;
                 }
-                else if (gameObject.crouch)
-                {
-                    gameObject.GetComponent<Animator>().SetBool("isCrouching", true);
-                    gameObject.Crouching();
-                    state = State.STATE_CROUCHING_LEFT;
-                }
-                else if (gameObject.storedAttack)
-                {
-                    gameObject.GetComponent<Animator>().SetBool("isAttacking", true);
-                    gameObject.StartAttacking();
-                    state = State.STATE_ATTACKING1_LEFT;
-                }
                 else if (gameObject.dashing)
                 {
                     if (gameObject.isPlayer)
@@ -146,6 +133,18 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isDashing", true);
                     state = State.STATE_DASHING_LEFT;
                 }
+                else if (gameObject.crouch && !gameObject.onAir)
+                {
+                    gameObject.GetComponent<Animator>().SetBool("isCrouching", true);
+                    gameObject.Crouching();
+                    state = State.STATE_CROUCHING_LEFT;
+                }
+                else if (gameObject.storedAttack)
+                {
+                    gameObject.GetComponent<Animator>().SetBool("isAttacking", true);
+                    gameObject.StartAttacking();
+                    state = State.STATE_ATTACKING1_LEFT;
+                }                
                 else if (gameObject.jump)
                 {
                     if (gameObject.isPlayer)
@@ -193,6 +192,16 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.Crouching();
                     state = State.STATE_HURTING_RIGHT;
                 }
+                else if (gameObject.dashing)
+                {
+                    if (gameObject.isPlayer)
+                    {
+                        gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
+                        gameObject.GetComponent<AudioSource>().Play();
+                    }
+                    gameObject.GetComponent<Animator>().SetBool("isDashing", true);
+                    state = State.STATE_DASHING_RIGHT;
+                }
                 else if (gameObject.crouch)
                 {
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", true);
@@ -206,17 +215,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                     gameObject.StartAttacking();
                     state = State.STATE_ATTACKING1_RIGHT;
-                }
-                else if (gameObject.dashing)
-                {
-                    if (gameObject.isPlayer)
-                    {
-                        gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
-                        gameObject.GetComponent<AudioSource>().Play();
-                    }
-                    gameObject.GetComponent<Animator>().SetBool("isDashing", true);
-                    state = State.STATE_DASHING_RIGHT;
-
                 }
                 else if (gameObject.jump)
                 {
@@ -262,6 +260,16 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("takeDamage", true);
                     state = State.STATE_HURTING_LEFT;
                 }
+                else if (gameObject.dashing)
+                {
+                    if (gameObject.isPlayer)
+                    {
+                        gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
+                        gameObject.GetComponent<AudioSource>().Play();
+                    }
+                    gameObject.GetComponent<Animator>().SetBool("isDashing", true);
+                    state = State.STATE_DASHING_LEFT;
+                }
                 else if (gameObject.crouch)
                 {
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", true);
@@ -276,17 +284,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                     gameObject.StartAttacking();
                     state = State.STATE_ATTACKING1_LEFT;
-                }
-                else if (gameObject.dashing)
-                {
-                    if (gameObject.isPlayer)
-                    {
-                        gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
-                        gameObject.GetComponent<AudioSource>().Play();
-                    }
-                    gameObject.GetComponent<Animator>().SetBool("isDashing", true);
-                    state = State.STATE_DASHING_LEFT;
-
                 }
                 else if (gameObject.jump)
                 {
@@ -340,7 +337,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", false);
                     state = State.STATE_IDLE_RIGHT;
                 }
-                else if (gameObject.dashing)
+                else if (gameObject.slideing)
                 {
                     if (gameObject.isPlayer)
                     {
@@ -349,7 +346,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     }
                     gameObject.GetComponent<Animator>().SetBool("isSlideing", true);
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", false);
-                    gameObject.EndCrouching();
                     state = State.STATE_SLIDEING_RIGHT;
                 }
                 else if (gameObject.speed < -0.1f)
@@ -383,7 +379,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", false);
                     state = State.STATE_IDLE_LEFT;
                 }
-                else if (gameObject.dashing)
+                else if (gameObject.slideing)
                 {
                     if (gameObject.isPlayer)
                     {
@@ -392,7 +388,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     }
                     gameObject.GetComponent<Animator>().SetBool("isSlideing", true);
                     gameObject.GetComponent<Animator>().SetBool("isCrouching", false);
-                    gameObject.EndCrouching();
                     state = State.STATE_SLIDEING_LEFT;
                 }
                 else if (gameObject.speed > 0.1f)
@@ -419,7 +414,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isSlideing", false);
                     state = State.STATE_HURTING_RIGHT;
                 }
-                else if (!gameObject.dashing)
+                else if (!gameObject.slideing)
                 {
                     gameObject.GetComponent<Animator>().SetBool("isSlideing", false);
                     if (gameObject.crouch || !gameObject.canGetUp)
@@ -452,7 +447,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     gameObject.GetComponent<Animator>().SetBool("isSlideing", false);
                     state = State.STATE_HURTING_LEFT;
                 }
-                else if (!gameObject.dashing)
+                else if (!gameObject.slideing)
                 {
                     gameObject.GetComponent<Animator>().SetBool("isSlideing", false);
                     if (gameObject.crouch || !gameObject.canGetUp)

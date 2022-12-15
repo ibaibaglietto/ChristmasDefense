@@ -22,6 +22,7 @@ public class Skeleton : MonoBehaviour
     public bool check = true;
     public bool dash = false;
     public bool dashing = false;
+    public bool slideing = false;
     public int lookingRight = 1;
     public bool dashShadow = false;
     public bool takeDamage = false;

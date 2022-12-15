@@ -51,13 +51,13 @@ public class NormalPhysicsComponent : PhysicsComponent
                 }
             }
             //We change the gravity to make the skeleton fall faster when the player isn't pressing the jump button
-            if (gameObject.gravity) gameObject.GetComponent<Rigidbody2D>().gravityScale = 3;
-            else gameObject.GetComponent<Rigidbody2D>().gravityScale = 1;
+            if (gameObject.gravity || gameObject.slideing) gameObject.GetComponent<Rigidbody2D>().gravityScale = 5;
+            else gameObject.GetComponent<Rigidbody2D>().gravityScale = 2;
             //We only jump if the skeleton is in the ground and it isn't crouching nor attacking
-            if (gameObject.jump && m_Grounded && !gameObject.crouching && !gameObject.attacking)
+            if (gameObject.jump && m_Grounded && !gameObject.crouching && !gameObject.attacking && !gameObject.slideing)
             {
                 m_Grounded = false;
-                velY = 8.0f;
+                velY = 16.0f;
                 gameObject.onAir = true;
             }
             //We put the skeleton in falling state if the y velocity is negative.
@@ -67,11 +67,11 @@ public class NormalPhysicsComponent : PhysicsComponent
                 m_Grounded = false;
             }
             //When the skeleton is attacking or crouching we don't move it in x
-            if (gameObject.attacking || gameObject.crouching) velX = 0.0f;
+            if ((gameObject.attacking && !gameObject.onAir) || gameObject.crouching) velX = 0.0f;
             //We save the velocity that we calculated
             gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(velX, velY);
             //We only dash if the time has passed and the skeleton hasn't dashed this jump
-            if (gameObject.dash && !gameObject.attacking && canDash && (Time.fixedTime - lastDash) > 0.5f)
+            if (gameObject.dash && !gameObject.crouching && !gameObject.slideing && !gameObject.attacking && canDash && (Time.fixedTime - lastDash) > 0.5f)
             {
                 gameObject.dashing = true;
                 lastDash = Time.fixedTime;
@@ -83,6 +83,18 @@ public class NormalPhysicsComponent : PhysicsComponent
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.lookingRight * 20.0f, 0.0f);
                 if (Time.fixedTime - lastDash > 0.25f) gameObject.dashing = false;
             }
+            if(gameObject.dash && gameObject.crouching && !gameObject.attacking && canDash && (Time.fixedTime - lastDash) > 0.5f)
+            {
+                gameObject.EndCrouching();
+                gameObject.slideing = true;
+                lastDash = Time.fixedTime;
+                canDash = false;
+            }
+            if (gameObject.slideing && (gameObject.dash || Time.fixedTime - lastDash <= 0.25f || !gameObject.canGetUp))
+            {
+                gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.lookingRight * 20.0f, velY);
+            }
+            else if (gameObject.slideing && !gameObject.dash && Time.fixedTime - lastDash > 0.25f && gameObject.canGetUp) gameObject.slideing = false;
         }
         //If the skeleton is dead or waiting the x velocity will be 0
         else
