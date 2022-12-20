@@ -65,6 +65,7 @@ public class NormalPhysicsComponent : PhysicsComponent
             {
                 gameObject.falling = true;
                 m_Grounded = false;
+                gameObject.onAir = true;
             }
             //When the skeleton is attacking or crouching we don't move it in x
             if ((gameObject.attacking && !gameObject.onAir) || gameObject.crouching) velX = 0.0f;

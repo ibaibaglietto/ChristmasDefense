@@ -5,7 +5,6 @@ using UnityEngine;
 //We will use the component pattern to create a skeleton that both the player and the follower can use
 public class Skeleton : MonoBehaviour
 {
-    [SerializeField] private float delay;
     private InputComponent input;
     private PhysicsComponent physics;
     private GraphicsComponent graphics;
@@ -26,6 +25,7 @@ public class Skeleton : MonoBehaviour
     public int lookingRight = 1;
     public bool dashShadow = false;
     public bool takeDamage = false;
+    public bool takingDamage = false;
     public bool dead = false;
     public bool crouch = false;
     public bool crouching = false;
@@ -35,6 +35,8 @@ public class Skeleton : MonoBehaviour
     public bool attacking = false;
     public bool storedAttack = false;
     public bool waiting;
+    public int monsterPos;
+    public int monsterHealth;
     public AudioClip jumpClip;
     public AudioClip dashClip;
     public AudioClip deathClip;
@@ -49,7 +51,10 @@ public class Skeleton : MonoBehaviour
         }
         else
         {
-
+            input = new MonsterInputComponent();
+            physics = new MonsterPhysicsComponent();
+            graphics = new MonsterGraphicsComponent();
+            input.Create(monsterPos, this);
         }
     }
 
@@ -133,12 +138,26 @@ public class Skeleton : MonoBehaviour
 
     public void StartDamage()
     {
+        if (!isPlayer)
+        {
+            monsterHealth--;
+            if (monsterHealth <= 0) dead = true;
+        }
         takeDamage = true;
     }
 
     public void EndDamage()
     {
         takeDamage = false;
+    }
+    public void StartTakingDamage()
+    {
+        takingDamage = true;
+    }
+
+    public void EndTakingDamage()
+    {
+        takingDamage = false;
     }
     public void StartAttack()
     {
@@ -172,6 +191,11 @@ public class Skeleton : MonoBehaviour
         dead = true;
     }
 
+    //Function to destroy an enemy
+    public void SelfDestroy()
+    {
+        Destroy(gameObject);
+    }
 
     //A function to create shadows when a skeleton dashes
     public void CreateDashShadow()

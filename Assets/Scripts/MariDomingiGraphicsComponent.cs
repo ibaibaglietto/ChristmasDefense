@@ -258,6 +258,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                 else if (gameObject.takeDamage)
                 {
                     gameObject.GetComponent<Animator>().SetBool("takeDamage", true);
+                    gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                     state = State.STATE_HURTING_LEFT;
                 }
                 else if (gameObject.dashing)

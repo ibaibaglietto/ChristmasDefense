@@ -27,7 +27,7 @@ public class PlayerInputComponent : InputComponent
     }
 
     //We don't need to use create with the player, because we don't need any delay on their movement
-    public override void Create(int numb)
+    public override void Create(int numb, Skeleton gameObject)
     {
         
     }
