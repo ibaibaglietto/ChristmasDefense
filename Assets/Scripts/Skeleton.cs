@@ -11,6 +11,7 @@ public class Skeleton : MonoBehaviour
     public InputHandler inputHandler;
     //The prefab of the dash and the gameobject where we are going to save it
     [SerializeField] private GameObject dashPrefab;
+    private GameController gameController;
     private GameObject shadow;
     //The public variables that the components will need
     public bool isPlayer;
@@ -55,6 +56,7 @@ public class Skeleton : MonoBehaviour
             physics = new MonsterPhysicsComponent();
             graphics = new MonsterGraphicsComponent();
             input.Create(monsterPos, this);
+            gameController = GameObject.Find("GameController").GetComponent<GameController>();
         }
     }
 
@@ -136,11 +138,11 @@ public class Skeleton : MonoBehaviour
         dashing = false;
     }
 
-    public void StartDamage()
+    public void StartDamage(int d)
     {
         if (!isPlayer)
         {
-            monsterHealth--;
+            monsterHealth -= d;
             if (monsterHealth <= 0) dead = true;
         }
         takeDamage = true;
@@ -176,9 +178,15 @@ public class Skeleton : MonoBehaviour
         storedAttack = false;
     }
 
+
     public void EndAttacking()
     {
         attacking = false;
+    }
+
+    public void DealDamage(int d)
+    {
+        gameController.DealDamage(d);
     }
     //Function to set the canGetUp boolean
     public void SetCanGetUp(bool g)

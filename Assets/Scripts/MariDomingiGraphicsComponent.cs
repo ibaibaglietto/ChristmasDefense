@@ -690,13 +690,14 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         gameObject.GetComponent<Animator>().SetBool("isFalling", false);
                         gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                     }
-                    if (gameObject.storedAttack)
-                    { 
-                        gameObject.GetComponent<Animator>().SetBool("isDashAttacking", true);
-                        gameObject.StartAttacking();
-                        state = State.STATE_DASHATTACKING_RIGHT;
-                    }
-                    else state = State.STATE_IDLE_RIGHT; 
+                    state = State.STATE_IDLE_RIGHT;
+                }
+                else if (gameObject.storedAttack)
+                {
+                    gameObject.GetComponent<Animator>().SetBool("isDashing", false);
+                    gameObject.GetComponent<Animator>().SetBool("isDashAttacking", true);
+                    gameObject.StartAttacking();
+                    state = State.STATE_DASHATTACKING_RIGHT;
                 }
                 break;
             case State.STATE_DASHING_LEFT:
@@ -725,13 +726,14 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         gameObject.GetComponent<Animator>().SetBool("isFalling", false);
                         gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                     }
-                    if (gameObject.storedAttack)
-                    {
-                        gameObject.GetComponent<Animator>().SetBool("isDashAttacking", true);
-                        gameObject.StartAttacking();
-                        state = State.STATE_DASHATTACKING_LEFT;
-                    }
-                    else state = State.STATE_IDLE_LEFT; 
+                    state = State.STATE_IDLE_LEFT;
+                }
+                else if (gameObject.storedAttack)
+                {
+                    gameObject.GetComponent<Animator>().SetBool("isDashing", false);
+                    gameObject.GetComponent<Animator>().SetBool("isDashAttacking", true);
+                    gameObject.StartAttacking();
+                    state = State.STATE_DASHATTACKING_LEFT;
                 }
                 break;
             case State.STATE_DASHATTACKING_RIGHT:

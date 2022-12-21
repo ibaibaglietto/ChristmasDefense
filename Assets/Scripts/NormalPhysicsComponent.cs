@@ -82,7 +82,13 @@ public class NormalPhysicsComponent : PhysicsComponent
             if (gameObject.dashing)
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.lookingRight * 20.0f, 0.0f);
-                if (Time.fixedTime - lastDash > 0.25f) gameObject.dashing = false;
+                gameObject.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+                gameObject.onAir = true;
+                if (Time.fixedTime - lastDash > 0.4f)
+                {
+                    gameObject.dashing = false;
+                    gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
+                }
             }
             if(gameObject.dash && gameObject.crouching && !gameObject.attacking && canDash && (Time.fixedTime - lastDash) > 0.5f)
             {

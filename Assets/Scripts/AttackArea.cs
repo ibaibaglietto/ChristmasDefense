@@ -4,12 +4,12 @@ using UnityEngine;
 
 public class AttackArea : MonoBehaviour
 {
+    [SerializeField] private int damage;
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log(collision.tag);
         if(collision.tag == "Monster")
         {
-            collision.GetComponent<Skeleton>().StartDamage();
+            collision.GetComponent<Skeleton>().StartDamage(damage);
         }
     }
 }
