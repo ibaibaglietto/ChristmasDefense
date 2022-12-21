@@ -35,13 +35,6 @@ public class InputHandler : MonoBehaviour
 
     private void Start()
     {
-        if (!PlayerPrefs.HasKey("moveLeft")) PlayerPrefs.SetString("moveLeft", "A");
-        if (!PlayerPrefs.HasKey("moveRight")) PlayerPrefs.SetString("moveRight", "D");
-        if (!PlayerPrefs.HasKey("jump")) PlayerPrefs.SetString("jump", "Space");
-        if (!PlayerPrefs.HasKey("dash")) PlayerPrefs.SetString("dash", "Mouse1");
-        if (!PlayerPrefs.HasKey("pause")) PlayerPrefs.SetString("pause", "Escape");
-        if (!PlayerPrefs.HasKey("attack")) PlayerPrefs.SetString("attack", "Mouse0");
-        if (!PlayerPrefs.HasKey("crouch")) PlayerPrefs.SetString("crouch", "S");
         //We save the strings that will be connected to the commands
         moveLeftPress = PlayerPrefs.GetString("moveLeft") + "ButtonPress";
         moveLeftRelease = PlayerPrefs.GetString("moveLeft") + "ButtonRelease";

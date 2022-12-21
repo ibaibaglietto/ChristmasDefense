@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Controls : MonoBehaviour
 {
-    //The action we are changing: 0 -> move left, 1 -> move right, 2 -> Jump, 3 -> Dash, 4 -> Pause
+    //The action we are changing: 0 -> move left, 1 -> move right, 2 -> Jump, 3 -> Dash, 4 -> Pause, 5 -> Attack, 6 -> Crouch
     private int action;
     //A boolean to know if we are waiting for a new button
     private bool waitingKey;
@@ -20,6 +20,8 @@ public class Controls : MonoBehaviour
     [SerializeField] private GameObject jumpImage;
     [SerializeField] private GameObject dashImage;
     [SerializeField] private GameObject pauseImage;
+    [SerializeField] private GameObject attackImage;
+    [SerializeField] private GameObject crouchImage;
     //All the sprites of the keys that can be used 
     public Sprite Escape;
     public Sprite F1;
@@ -126,6 +128,8 @@ public class Controls : MonoBehaviour
         moveRightImage.GetComponent<Image>().sprite = (Sprite)GetType().GetField(PlayerPrefs.GetString("moveRight")).GetValue(this);
         jumpImage.GetComponent<Image>().sprite = (Sprite)GetType().GetField(PlayerPrefs.GetString("jump")).GetValue(this);
         dashImage.GetComponent<Image>().sprite = (Sprite)GetType().GetField(PlayerPrefs.GetString("dash")).GetValue(this);
+        attackImage.GetComponent<Image>().sprite = (Sprite)GetType().GetField(PlayerPrefs.GetString("attack")).GetValue(this);
+        crouchImage.GetComponent<Image>().sprite = (Sprite)GetType().GetField(PlayerPrefs.GetString("crouch")).GetValue(this);
         //We change the text depending on the selected language
         if (PlayerPrefs.GetInt("language") == 0) changeButtonText.text = "Press the button you want to use.";
         else if(PlayerPrefs.GetInt("language") == 1) changeButtonText.text = "Presiona el botón que quieres usar.";
@@ -172,6 +176,16 @@ public class Controls : MonoBehaviour
                             {
                                 pauseImage.GetComponent<Image>().sprite = button;
                                 PlayerPrefs.SetString("pause", kcode.ToString());
+                            }
+                            else if (action == 5)
+                            {
+                                attackImage.GetComponent<Image>().sprite = button;
+                                PlayerPrefs.SetString("attack", kcode.ToString());
+                            }
+                            else if (action == 6)
+                            {
+                                crouchImage.GetComponent<Image>().sprite = button;
+                                PlayerPrefs.SetString("crouch", kcode.ToString());
                             }
                             waitingKey = false;
                             changeButton.SetActive(false);
