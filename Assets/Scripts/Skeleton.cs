@@ -41,6 +41,7 @@ public class Skeleton : MonoBehaviour
     public AudioClip jumpClip;
     public AudioClip dashClip;
     public AudioClip deathClip;
+    public AudioClip attackClip;
     //We will initialize the components looking if it is the player and the delay we need to apply
     void Start()
     {
@@ -68,7 +69,6 @@ public class Skeleton : MonoBehaviour
     }
     private void FixedUpdate()
     {
-        input.FixedUpdate(this);
         physics.FixedUpdate(this);
     }
 
@@ -163,8 +163,11 @@ public class Skeleton : MonoBehaviour
     }
     public void StartAttack()
     {
-        attack = true;
-        storedAttack = true;
+        if (!waiting)
+        {
+            attack = true;
+            storedAttack = true;
+        }
     }
 
     public void EndAttack()
@@ -184,8 +187,22 @@ public class Skeleton : MonoBehaviour
         attacking = false;
     }
 
+    private void OnApplicationFocus(bool focus)
+    {
+        if(isPlayer && !focus)
+        {
+            EndAttack();
+            EndCrouch();
+            EndDash();
+            StopJump();
+            speed = 0.0f;
+        }
+    }
+
     public void DealDamage(int d)
     {
+        gameObject.GetComponent<AudioSource>().clip = attackClip;
+        gameObject.GetComponent<AudioSource>().Play();
         gameController.DealDamage(d);
     }
     //Function to set the canGetUp boolean

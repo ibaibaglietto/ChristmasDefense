@@ -93,6 +93,8 @@ public class MainMenu : MonoBehaviour
     private TextMeshProUGUI moveRightText;
     private TextMeshProUGUI jumpText;
     private TextMeshProUGUI dashText;
+    private TextMeshProUGUI attackText;
+    private TextMeshProUGUI crouchText;
     private TextMeshProUGUI controlsTitleText;
     private TextMeshProUGUI returnToSettingsText;
     private TextMeshProUGUI changeControlButtonText;
@@ -117,6 +119,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        Cursor.lockState = CursorLockMode.Confined;
         //We put the resolution time to 0
         resolutionTime = 0.0f;
         //We find all the UI gameobjects
@@ -158,6 +161,8 @@ public class MainMenu : MonoBehaviour
         moveRightText = GameObject.Find("MoveRightText").GetComponent<TextMeshProUGUI>();
         jumpText = GameObject.Find("JumpText").GetComponent<TextMeshProUGUI>();
         dashText = GameObject.Find("DashText").GetComponent<TextMeshProUGUI>();
+        attackText = GameObject.Find("AttackText").GetComponent<TextMeshProUGUI>();
+        crouchText = GameObject.Find("CrouchText").GetComponent<TextMeshProUGUI>();
         controlsTitleText = GameObject.Find("ControlsTitleText").GetComponent<TextMeshProUGUI>();
         returnToSettingsText = GameObject.Find("ReturnControlText").GetComponent<TextMeshProUGUI>();
         changeControlButtonText = GameObject.Find("ChangeControlText").GetComponent<TextMeshProUGUI>();
@@ -761,10 +766,10 @@ public class MainMenu : MonoBehaviour
             creditsTitleText.text = "Credits";
             creditsReturnText.text = "Return";
             howToPlayTitleText.text = "How to play";
-            howToPlayPage1.text = "In Arima’s Shadow you will have to catch as many coins as you can, but every time you grab one of them a shadow of yourself from one second before will start following you.";
-            howToPlayPage2.text = "If a shadow touches Arima the game will end and you will need to start again from the beginning.";
-            howToPlayPage3.text = "To avoid the shadows you can use the jump and the dash in addition to the normal movement.";
-            howToPlayPage4.text = "If you exit the screen from any side, you will appear on the other one, really useful to find new ways to avoid the shadows.";
+            howToPlayPage1.text = "In Christmas Defense you will need to help Mari Domingi to protect as much as you can the chests where the presents for the children are stored.";
+            howToPlayPage2.text = "Some enemies will approach the chests to break them: the brown one, 2 health points and normal speed; the blue one, 3 health points and slow speed; and the yellow one, only one health point and high speed. They will deal the same damage as health points they have. They only care about the chests, so they will ignore you.";
+            howToPlayPage3.text = "To move you can use the jump and the dash in addition to the normal movement. If you use the dash while you are crouching, you will slide. In addition, this movement is not capped, move from a side of the screen to the other while sliding! ";
+            howToPlayPage4.text = "To finish the enemies you can attack them with your sword. While standing you can attack twice, dealing one point of damage with each one, but if you attack while dashing you will attack using a dash attack, which deals two points of damage. Think carefully which attack you want to use!";
             howToPlayPage5.text = "You can stop the game in any moment, then continuing, restarting or returning to the main menu.";
             howToPlayPage6.text = "You can change all the buttons of the controls at the settings menu, use the button combination that is better to you!";
             howToPlayReturnText.text = "Return";
@@ -773,6 +778,8 @@ public class MainMenu : MonoBehaviour
             moveRightText.text = "Move right";
             jumpText.text = "Jump";
             dashText.text = "Dash";
+            crouchText.text = "Crouch";
+            attackText.text = "Attack";
             controlsTitleText.text = "Controls";
             returnToSettingsText.text = "Return to settings";
             changeControlButtonText.text = "Press the button you want to use.";
@@ -803,10 +810,10 @@ public class MainMenu : MonoBehaviour
             creditsTitleText.text = "Créditos";
             creditsReturnText.text = "Volver";
             howToPlayTitleText.text = "Cómo jugar";
-            howToPlayPage1.text = "En Arima’s Shadow tendrás que intentar recoger el máximo número de monedas posible, pero cada vez que cojas una te empezara a perseguir una sombra tuya de hace un segundo.";
-            howToPlayPage2.text = "Si una sombra toca a Arima el juego terminará y tendrás que volver a empezar desde el principio.";
-            howToPlayPage3.text = "Para evitar las sombras podrás usar los saltos y las embestidas además del movimiento normal.";
-            howToPlayPage4.text = "Si sales de la pantalla por cualquiera de los lados, aparecerás en el otro, muy útil para encontrar nuevos caminos para evitar las sombras.";
+            howToPlayPage1.text = "En Christmas Defense tendras que ayudar a Mari Domingi a proteger el máximo tiempo posible los cofres que guardan los regalos para los niños.";
+            howToPlayPage2.text = "A romper estos cofres se acercarán varios enemigos: el marrón, 2 puntos de vida y velocidad normal; el azul, 3 puntos de vida y velocidad lenta; y el amarillo, único punto de vida y gran velocidad. Romperán los cofres según sus puntos de vida. A los enemigos solo les importan los cofres, a ti te ignorarán.";
+            howToPlayPage3.text = "Para moverte podrás usar los saltos y las embestidas además del movimiento normal. Si usas la embestida mientras estas agachado podrás deslizarte. Además, este movimiento no tiene límites, ¡muévete de una punta de la pantalla a la otra deslizándote!";
+            howToPlayPage4.text = "Para acabar con los enemigos puedes atacarles con tu espada. Normalmente puedes atacar dos veces, quitando un punto de vida con cada ataque, pero si atacas mientras estas embistiendo usarás el ataque de embestida, el cual quita dos puntos de vida. ¡Piensa bien que ataque quieres utilizar!";
             howToPlayPage5.text = "Puedes parar el juego en cualquier momento, luego continuándolo, reiniciando o regresando al menú principal.";
             howToPlayPage6.text = "Puedes cambiar los botones de todos los controles desde el menú de ajustes, ¡usa la combinación de botones que más te guste!";
             howToPlayReturnText.text = "Volver";
@@ -815,6 +822,8 @@ public class MainMenu : MonoBehaviour
             moveRightText.text = "Moverse a la derecha";
             jumpText.text = "Saltar";
             dashText.text = "Embestir";
+            crouchText.text = "Agacharse";
+            attackText.text = "Atacar";
             controlsTitleText.text = "Controles";
             returnToSettingsText.text = "Volver a los ajustes";
             changeControlButtonText.text = "Presiona el botón que quieras usar.";
@@ -844,10 +853,10 @@ public class MainMenu : MonoBehaviour
             creditsTitleText.text = "Kredituak";
             creditsReturnText.text = "Itzuli";
             howToPlayTitleText.text = "Nola jolastu";
-            howToPlayPage1.text = "Arima's Shadow-en ahal duzun txanpon gehien biltzen saiatu behar zara, baina hauetako bat hartzen duzun bakoitzean duela segundo bateko zure itzal batek jarraituko zaitu. ";
-            howToPlayPage2.text = "Itzal batek Arima ukitzen badu jokoa amaitu egingo da eta hasieratik hasi beharko zara berriro.";
-            howToPlayPage3.text = "Itzalak saihesteko saltoak eta desplazamendu bizkorrak erabil ditzakezu mugimendu normalaz aparte.";
-            howToPlayPage4.text = "Pantailatik irteten bazara edozein aldetik, beste aldean agertuko zara, oso erabilgarria itzalak saihesteko bide berriak aurkitzeko.";
+            howToPlayPage1.text = "Christmas Defense-en umeentzako opariak dituzten kutxak ahal eta denbora gehien defenditzen lagundu behar diozu Mari Domingiri.";
+            howToPlayPage2.text = "Kutxa hauek apurtzera hainbat etsai gerturatuko dira: marroia, 2 bizi puntu eta abiadura normala duena; urdina, 3 bizi puntu eta abiadura motela duena; eta horia, bizi puntu bakarra eta abiadura azkarra duena. Bizi puntuen arabera apurtuko dituzte kutxak. Etsaiei kutxak bakarrik inporta zaizkie, zuri ez dizute inongo erasorik egingo.";
+            howToPlayPage3.text = "Mugitzeko saltoak eta desplazamendu bizkorrak erabil ditzakezu mugimendu normalaz aparte. Desplazamendu bizkorra makurtuta zauden bitartean egiten baduzu lurrean irrista zaitezke. Gainera, mugimendu honek ez du limiterik, mugi zaitez pantailako punta batetik bestera irristatuz!";
+            howToPlayPage4.text = "Etsaiak akabatzeko zure ezpatarekin erasotu ahal dituzu. Normalean bi aldiz erasotu ahal duzu ezpatarekin, eraso bakoitzarekin bizi puntu bat kenduz etsaiei, baina desplazamendu bizkorra egiten ari zaren bitartean erasotzen baduzu desplazamendu erasoa erabiliko duzu, bi bizi puntu kentzen dituena. Ondo pentsatu ze eraso erabili nahi duzun!";
             howToPlayPage5.text = "Jokoa edozein momentuan geldi dezakezu, gero jokoa jarraituz, berrabiaraziz edo menu nagusira itzuliz.";
             howToPlayPage6.text = "Kontrol guztien botoiak ezarpenen menutik alda ditzakezu, zuri gehien gustatzen zaizun botoi konbinazioa erabil ezazu!";
             howToPlayReturnText.text = "Itzuli";
@@ -856,6 +865,8 @@ public class MainMenu : MonoBehaviour
             moveRightText.text = "Eskuinerantz mugitu";
             jumpText.text = "Salto egin";
             dashText.text = "Desplazamendu bizkorra";
+            crouchText.text = "Makurtu";
+            attackText.text = "Eraso egin";
             controlsTitleText.text = "Kontrolak";
             returnToSettingsText.text = "Ezarpenetara itzuli";
             changeControlButtonText.text = "Erabili nahi duzun botoia sakatu.";

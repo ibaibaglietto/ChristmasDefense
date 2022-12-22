@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 2560
     height: 1349
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Project
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 371}
   m_MaxSize: {x: 10000, y: 10000}
@@ -119,7 +119,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 200}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 25
+  controlID: 74
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -144,7 +144,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 200}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 26
+  controlID: 75
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -169,7 +169,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 27
+  controlID: 76
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -234,7 +234,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -243,16 +243,16 @@ MonoBehaviour:
     y: 917
     width: 2029
     height: 382
-  m_MinSize: {x: 100, y: 100}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 17}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -263,7 +263,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: InspectorWindow
+  m_Name: GridPaintPaletteWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -272,17 +272,17 @@ MonoBehaviour:
     y: 0
     width: 531
     height: 1299
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
-  m_ActualView: {fileID: 20}
+  m_MinSize: {x: 241, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 23}
   m_Panes:
   - {fileID: 20}
   - {fileID: 21}
   - {fileID: 22}
   - {fileID: 23}
   - {fileID: 24}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -406,23 +406,23 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 
+      m_SelectedIDs: a4770000
       m_LastClickedID: 0
-      m_ExpandedIDs: 863fffff2afbffff
+      m_ExpandedIDs: 667dffff047effffde82ffff2083ffff1485ffff8085ffffaab8fffff0b8ffffe4baffff50bbffff04e2ffffe8e6ffff2afbfffff4630000206400003e640000cc320100f8320100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: 
-        m_OriginalName: 
+        m_Name: CreditsReturn
+        m_OriginalName: CreditsReturn
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 0
+        m_UserData: 79492
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 11
+        m_OriginalEventType: 0
         m_IsRenamingFilename: 0
         m_ClientGUIView: {fileID: 8}
       m_SearchString: 
@@ -679,9 +679,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 662.9221, y: 714.48785, z: -12.043455}
+    m_Target: {x: 5.1479716, y: -2.8545575, z: -2.7863076}
     speed: 2
-    m_Value: {x: 662.9221, y: 714.48785, z: -12.043455}
+    m_Value: {x: 5.2504926, y: -2.2471704, z: -2.794722}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -732,9 +732,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 1137.2648
+    m_Target: 17.857327
     speed: 2
-    m_Value: 1137.2648
+    m_Value: 18.69877
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -792,7 +792,7 @@ MonoBehaviour:
   m_Zoom: -1
   m_ScrollPosition: {x: 0, y: 0}
   m_SelectedObject: {fileID: 0}
-  m_SelectedSpriteRectGUID: 32781ad1ca32784439d85047e703aadd
+  m_SelectedSpriteRectGUID: 00000000000000000000000000000000
   m_LastUsedModuleTypeName: 
 --- !u!114 &16
 MonoBehaviour:
@@ -835,22 +835,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Resources/Flying eye (luizmelo itch)/Prefabs
+    - Assets/Resources/Cainos/Pixel Art Platformer - Village Props/Texture
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Resources/Flying eye (luizmelo itch)/Prefabs
+  - Assets/Resources/Cainos/Pixel Art Platformer - Village Props/Texture
   m_LastFoldersGridSize: -1
   m_LastProjectPath: F:\UnityGames\Navidad\Navidad
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 135}
-    m_SelectedIDs: ba710000
-    m_LastClickedID: 29114
-    m_ExpandedIDs: 000000001a6900001c6900001e69000020690000226900002469000026690000286900008a6e00009c6e00009e6e0000
+    scrollPos: {x: 0, y: 31}
+    m_SelectedIDs: a4770000
+    m_LastClickedID: 30628
+    m_ExpandedIDs: 000000006c7700006e77000070770000727700007477000076770000787700007a7700007c7700007e7700008077000096770000a8770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -878,7 +878,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001a6900001c6900001e6900002069000022690000246900002669000028690000
+    m_ExpandedIDs: 000000006c7700006e77000070770000727700007477000076770000787700007a7700007c7700007e77000080770000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -903,10 +903,10 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 3cb70000
-    m_LastClickedInstanceID: 46908
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
-    m_ExpandedInstanceIDs: c6230000000000009e6f0000
+    m_ExpandedInstanceIDs: c6230000000000009e6f0000f46900009e710000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -922,7 +922,7 @@ MonoBehaviour:
       m_IsRenaming: 0
       m_OriginalEventType: 11
       m_IsRenamingFilename: 1
-      m_ClientGUIView: {fileID: 0}
+      m_ClientGUIView: {fileID: 10}
     m_CreateAssetUtility:
       m_EndAction: {fileID: 0}
       m_InstanceID: 0
@@ -1102,11 +1102,11 @@ MonoBehaviour:
     - e00: 0.614125
       e01: 0
       e02: 0
-      e03: 361.91525
+      e03: 361.91534
       e10: 0
       e11: 0.614125
       e12: 0
-      e13: 115.82118
+      e13: 115.821175
       e20: 0
       e21: 0
       e22: 1
@@ -1436,9 +1436,11 @@ MonoBehaviour:
       e32: 0
       e33: 1
   m_PreviewAnimator: {fileID: 0}
-  m_AnimatorController: {fileID: 9100000, guid: c1c19b8fdc1c3af479c71463ebb92f8d, type: 2}
+  m_AnimatorController: {fileID: 9100000, guid: 48d0e3cf7380ed34a87e89d1416c1711, type: 2}
   m_BreadCrumbs:
-  - m_Target: {fileID: 8728503193942735912, guid: c1c19b8fdc1c3af479c71463ebb92f8d, type: 2}
+  - m_Target: {fileID: -7094404536518777257, guid: 48d0e3cf7380ed34a87e89d1416c1711, type: 2}
+    m_ScrollPosition: {x: 0, y: 0}
+  - m_Target: {fileID: 8052935753543839011, guid: 48d0e3cf7380ed34a87e89d1416c1711, type: 2}
     m_ScrollPosition: {x: 0, y: 0}
   stateMachineGraph: {fileID: 0}
   stateMachineGraphGUI: {fileID: 0}
@@ -1481,7 +1483,7 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 46908
+  m_LastSelectedObjectID: 78614
 --- !u!114 &20
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -1558,8 +1560,8 @@ MonoBehaviour:
   m_SearchText: 
   m_TreeViewState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: eb925b96
-    m_LastClickedID: -1772383509
+    m_SelectedIDs: 4dcf9b58
+    m_LastClickedID: 1486606157
     m_ExpandedIDs: a01a5fa600000000c53aba5a
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1598,9 +1600,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2028
+    x: 2029
     y: 73
-    width: 531
+    width: 530
     height: 1278
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:
@@ -1610,7 +1612,7 @@ MonoBehaviour:
   notificationClearTime: -1
   timeSinceLastRotation: -1
   currentBranchAndRemoteHasUpdate: 0
-  currentTrackingStatusHasUpdate: 1
+  currentTrackingStatusHasUpdate: 0
   currentStatusEntriesHasUpdate: 1
   repositoryProgressHasUpdate: 1
   appManagerProgressHasUpdate: 1
@@ -1704,16 +1706,995 @@ MonoBehaviour:
     commitBody: 
     commitMessage: 
     currentBranch: master
-    treeScroll: {x: 0, y: 0}
+    treeScroll: {x: 0, y: 185}
     treeChanges:
       assets:
-        keys: []
-        values: []
+        keys:
+        - 00000000000000001000000000000000
+        - 2819312463df89f498766ba7f22970c6
+        - 244da2e9cba405944aee11925f3b372d
+        - 9f0d00de94c527f4aaa8b17ac41fd391
+        - ebd91256d83e8cc49b5916cba7a7d204
+        - 8721dd52f096c2b4087fd38cf3287627
+        - 5c8b504ba21c20d49be2459fc427529b
+        - ceb102c1d79299b4fa10a87d614cbe93
+        - 23f2b2098d101a64ea64206d40308b8d
+        - 8b50b66ccac0da24693a1b856d268795
+        - 4ad8bc8d6f559184da8ab4a9c811a3cb
+        - f6191010b9addba46a5493e3babe05be
+        - 13c8377f0692ac243b8ba9d7e256442d
+        - 94c36124d10977c4ca7a8856b12dd16c
+        - 25b0016220194924599566f49be7eb62
+        - 1311132d7eb5ab64e9528b9a1051bc90
+        - ca3b21f40f1cc034486737e6fa3ba9be
+        - 3e0fbe6f445853f4997b0d224ae4d7bc
+        - 84309036a64258a498418cff0d3b0250
+        - d7377053416ec6f4cb52e90e29810269
+        - b451896b3ae447248a352fa84c5829d9
+        - 8a144714527dcf847ae36592ee681b8c
+        - 852e249b68b85bf4aa98affe8d0ccedf
+        - 95497881dd05c414fa09ac595ce1628d
+        - 556c4fc0a12584a4ebeb69b6be06ef4c
+        - a1c1fb7e77ab7664dacd82acdec62cb5
+        - 131a6b21c8605f84396be9f6751fb6e3
+        - 2cda990e2423bbf4892e6590ba056729
+        - eaf3584a60b71584b95bbdfce25ba821
+        - 54af987960b663341b70cc2f032a5ff6
+        - 044113842b0ba2c41b427684871c6453
+        - 7bba9e51ca3a0b84cb11c62216e17703
+        - fed6884851e366e41a95c6fb3c2e9f59
+        - 1a36ed8b7e203c4489c1ece2cf715b21
+        - 9d55ee4064cd1c94e8d07d3e74f2975f
+        - 069bd731d43982b46aabc88ff180c35e
+        - 40c5b1888ba2e33448c7e1a61e55d7b9
+        - 00000000000000004000000000000000
+        values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources
+          label: Resources
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)
+          label: Flying eye (luizmelo itch)
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Effects
+          label: Effects
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+          label: hurt_004.wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+              itch)\Effects\hurt_004.wav
+            projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs
+          label: Prefabs
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+          label: MonsterFast.prefab
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+              itch)\Prefabs\MonsterFast.prefab
+            projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+          label: MonsterNormal.prefab
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+              itch)\Prefabs\MonsterNormal.prefab
+            projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+          label: MonsterTank.prefab
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+              itch)\Prefabs\MonsterTank.prefab
+            projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\Icon.png
+          label: Icon.png
+          level: 2
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Icon.png
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Icon.png
+            projectPath: Assets\Resources\Icon.png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Music
+          label: Music
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+          label: Ludum Dare 28 - Track 8.wav
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum
+              Dare 28 - Track 8.wav
+            projectPath: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+          label: Ludum Dare 38 - Track 5.wav
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum
+              Dare 38 - Track 5.wav
+            projectPath: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\UI
+          label: UI
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\UI\Fonts
+          label: Fonts
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\UI\Fonts\Capture it SDF.asset
+          label: Capture it SDF.asset
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\UI\Fonts\Capture it SDF.asset
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Capture
+              it SDF.asset
+            projectPath: Assets\Resources\UI\Fonts\Capture it SDF.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+          label: Chomsky SDF.asset
+          level: 4
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Chomsky
+              SDF.asset
+            projectPath: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+          label: Evil Empire SDF.asset
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil
+              Empire SDF.asset
+            projectPath: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\UI\Fonts\Evil Empire.otf
+          label: Evil Empire.otf
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\UI\Fonts\Evil Empire.otf
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil
+              Empire.otf
+            projectPath: Assets\Resources\UI\Fonts\Evil Empire.otf
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\UI\status frame(ege).png
+          label: status frame(ege).png
+          level: 3
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\UI\status frame(ege).png
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\status frame(ege).png
+            projectPath: Assets\Resources\UI\status frame(ege).png
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Warrior
+          label: Warrior
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Warrior\Effects
+          label: Effects
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Warrior\Effects\death_4_karen.wav
+          label: death_4_karen.wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Warrior\Effects\death_4_karen.wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\death_4_karen.wav
+            projectPath: Assets\Resources\Warrior\Effects\death_4_karen.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+          label: grunting_1_karen.wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+            projectPath: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+          label: grunting_8_meghan(salto).wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+            projectPath: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+          label: grunting_9_meghan(dash).wav
+          level: 4
+          isFolder: 0
+          isContainer: 1
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+            projectPath: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+            originalPath: 
+            indexStatus: 1
+            workTreeStatus: 1
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes\GameplayScene.unity
+          label: GameplayScene.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\GameplayScene.unity
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scenes\GameplayScene.unity
+            projectPath: Assets\Scenes\GameplayScene.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scenes\MainMenu.unity
+          label: MainMenu.unity
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scenes\MainMenu.unity
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scenes\MainMenu.unity
+            projectPath: Assets\Scenes\MainMenu.unity
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts\GameController.cs
+          label: GameController.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\GameController.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\GameController.cs
+            projectPath: Assets\Scripts\GameController.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\InputComponent.cs
+          label: InputComponent.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\InputComponent.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\InputComponent.cs
+            projectPath: Assets\Scripts\InputComponent.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\MainMenu.cs
+          label: MainMenu.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\MainMenu.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MainMenu.cs
+            projectPath: Assets\Scripts\MainMenu.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\MariDomingiGraphicsComponent.cs
+          label: MariDomingiGraphicsComponent.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\MariDomingiGraphicsComponent.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MariDomingiGraphicsComponent.cs
+            projectPath: Assets\Scripts\MariDomingiGraphicsComponent.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\MonsterInputComponent.cs
+          label: MonsterInputComponent.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\MonsterInputComponent.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MonsterInputComponent.cs
+            projectPath: Assets\Scripts\MonsterInputComponent.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\PlayerInputComponent.cs
+          label: PlayerInputComponent.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\PlayerInputComponent.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\PlayerInputComponent.cs
+            projectPath: Assets\Scripts\PlayerInputComponent.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: Assets\Scripts\Skeleton.cs
+          label: Skeleton.cs
+          level: 2
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: Assets\Scripts\Skeleton.cs
+            fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\Skeleton.cs
+            projectPath: Assets\Scripts\Skeleton.cs
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
+        - path: ProjectSettings\ProjectSettings.asset
+          label: ProjectSettings.asset
+          level: 1
+          isFolder: 0
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: ProjectSettings\ProjectSettings.asset
+            fullPath: F:\UnityGames\Navidad\Navidad\ProjectSettings\ProjectSettings.asset
+            projectPath: ProjectSettings\ProjectSettings.asset
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 3
       folders:
         keys:
+        - Assets
+        - Assets\Resources
+        - Assets\Resources\Flying eye (luizmelo itch)
+        - Assets\Resources\Flying eye (luizmelo itch)\Effects
+        - Assets\Resources\Flying eye (luizmelo itch)\Prefabs
+        - Assets\Resources\Music
+        - Assets\Resources\UI
+        - Assets\Resources\UI\Fonts
+        - Assets\Resources\Warrior
+        - Assets\Resources\Warrior\Effects
+        - Assets\Scenes
+        - Assets\Scripts
+        - ProjectSettings
         - UserSettings
         - UserSettings\Layouts
         values:
+        - path: Assets
+          label: Assets
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources
+          label: Resources
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)
+          label: Flying eye (luizmelo itch)
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Effects
+          label: Effects
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs
+          label: Prefabs
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Music
+          label: Music
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\UI
+          label: UI
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\UI\Fonts
+          label: Fonts
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Warrior
+          label: Warrior
+          level: 2
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Resources\Warrior\Effects
+          label: Effects
+          level: 3
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scenes
+          label: Scenes
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: Assets\Scripts
+          label: Scripts
+          level: 1
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
+        - path: ProjectSettings
+          label: ProjectSettings
+          level: 0
+          isFolder: 1
+          isContainer: 0
+          isCollapsed: 0
+          isHidden: 0
+          isActive: 0
+          treeIsCheckable: 1
+          checkState: 0
+          isLocked: 0
+          gitStatusEntry:
+            path: 
+            fullPath: 
+            projectPath: 
+            originalPath: 
+            indexStatus: 0
+            workTreeStatus: 0
         - path: UserSettings
           label: UserSettings
           level: 0
@@ -1778,6 +2759,976 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: Assets
+        label: Assets
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources
+        label: Resources
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Flying eye (luizmelo itch)
+        label: Flying eye (luizmelo itch)
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Effects.meta
+        label: Effects.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Flying eye (luizmelo itch)\Effects.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+            itch)\Effects.meta
+          projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Effects
+        label: Effects
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+        label: hurt_004.wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+            itch)\Effects\hurt_004.wav
+          projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav.meta
+        label: hurt_004.wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+            itch)\Effects\hurt_004.wav.meta
+          projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs
+        label: Prefabs
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+        label: MonsterFast.prefab
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+            itch)\Prefabs\MonsterFast.prefab
+          projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+        label: MonsterNormal.prefab
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+            itch)\Prefabs\MonsterNormal.prefab
+          projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+        label: MonsterTank.prefab
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+            itch)\Prefabs\MonsterTank.prefab
+          projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\Icon.png
+        label: Icon.png
+        level: 2
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Icon.png
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Icon.png
+          projectPath: Assets\Resources\Icon.png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Icon.png.meta
+        label: Icon.png.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Icon.png.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Icon.png.meta
+          projectPath: Assets\Resources\Icon.png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Music
+        label: Music
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+        label: Ludum Dare 28 - Track 8.wav
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare
+            28 - Track 8.wav
+          projectPath: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav.meta
+        label: Ludum Dare 28 - Track 8.wav.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare
+            28 - Track 8.wav.meta
+          projectPath: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+        label: Ludum Dare 38 - Track 5.wav
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare
+            38 - Track 5.wav
+          projectPath: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav.meta
+        label: Ludum Dare 38 - Track 5.wav.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare
+            38 - Track 5.wav.meta
+          projectPath: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\UI
+        label: UI
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\UI\Fonts
+        label: Fonts
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\UI\Fonts\Capture it SDF.asset
+        label: Capture it SDF.asset
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\Fonts\Capture it SDF.asset
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Capture
+            it SDF.asset
+          projectPath: Assets\Resources\UI\Fonts\Capture it SDF.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+        label: Chomsky SDF.asset
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Chomsky
+            SDF.asset
+          projectPath: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+        label: Evil Empire SDF.asset
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil
+            Empire SDF.asset
+          projectPath: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset.meta
+        label: Evil Empire SDF.asset.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil
+            Empire SDF.asset.meta
+          projectPath: Assets\Resources\UI\Fonts\Evil Empire SDF.asset.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\UI\Fonts\Evil Empire.otf
+        label: Evil Empire.otf
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\Fonts\Evil Empire.otf
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil
+            Empire.otf
+          projectPath: Assets\Resources\UI\Fonts\Evil Empire.otf
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\UI\Fonts\Evil Empire.otf.meta
+        label: Evil Empire.otf.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\Fonts\Evil Empire.otf.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil
+            Empire.otf.meta
+          projectPath: Assets\Resources\UI\Fonts\Evil Empire.otf.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\UI\status frame(ege).png
+        label: status frame(ege).png
+        level: 3
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\status frame(ege).png
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\status frame(ege).png
+          projectPath: Assets\Resources\UI\status frame(ege).png
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\UI\status frame(ege).png.meta
+        label: status frame(ege).png.meta
+        level: 4
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\UI\status frame(ege).png.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\status frame(ege).png.meta
+          projectPath: Assets\Resources\UI\status frame(ege).png.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior
+        label: Warrior
+        level: 2
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Warrior\Effects.meta
+        label: Effects.meta
+        level: 3
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects.meta
+          projectPath: Assets\Resources\Warrior\Effects.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects
+        label: Effects
+        level: 3
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Resources\Warrior\Effects\death_4_karen.wav
+        label: death_4_karen.wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\death_4_karen.wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\death_4_karen.wav
+          projectPath: Assets\Resources\Warrior\Effects\death_4_karen.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+        label: death_4_karen.wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+          projectPath: Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+        label: grunting_1_karen.wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+          projectPath: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+        label: grunting_1_karen.wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+          projectPath: Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+        label: grunting_8_meghan(salto).wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+          projectPath: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+        label: grunting_8_meghan(salto).wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+          projectPath: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+        label: grunting_9_meghan(dash).wav
+        level: 4
+        isFolder: 0
+        isContainer: 1
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+          projectPath: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+        label: grunting_9_meghan(dash).wav.meta
+        level: 5
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+          projectPath: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: Assets\Scenes
+        label: Scenes
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scenes\GameplayScene.unity
+        label: GameplayScene.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\GameplayScene.unity
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scenes\GameplayScene.unity
+          projectPath: Assets\Scenes\GameplayScene.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scenes\MainMenu.unity
+        label: MainMenu.unity
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scenes\MainMenu.unity
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scenes\MainMenu.unity
+          projectPath: Assets\Scenes\MainMenu.unity
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts
+        label: Scripts
+        level: 1
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: Assets\Scripts\GameController.cs
+        label: GameController.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\GameController.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\GameController.cs
+          projectPath: Assets\Scripts\GameController.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\InputComponent.cs
+        label: InputComponent.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\InputComponent.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\InputComponent.cs
+          projectPath: Assets\Scripts\InputComponent.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\MainMenu.cs
+        label: MainMenu.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\MainMenu.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MainMenu.cs
+          projectPath: Assets\Scripts\MainMenu.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\MariDomingiGraphicsComponent.cs
+        label: MariDomingiGraphicsComponent.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\MariDomingiGraphicsComponent.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MariDomingiGraphicsComponent.cs
+          projectPath: Assets\Scripts\MariDomingiGraphicsComponent.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\MonsterInputComponent.cs
+        label: MonsterInputComponent.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\MonsterInputComponent.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MonsterInputComponent.cs
+          projectPath: Assets\Scripts\MonsterInputComponent.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\PlayerInputComponent.cs
+        label: PlayerInputComponent.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\PlayerInputComponent.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\PlayerInputComponent.cs
+          projectPath: Assets\Scripts\PlayerInputComponent.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\Scripts\Skeleton.cs
+        label: Skeleton.cs
+        level: 2
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\Scripts\Skeleton.cs
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\Skeleton.cs
+          projectPath: Assets\Scripts\Skeleton.cs
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
+      - path: Assets\StreamingAssets.meta
+        label: StreamingAssets.meta
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: Assets\StreamingAssets.meta
+          fullPath: F:\UnityGames\Navidad\Navidad\Assets\StreamingAssets.meta
+          projectPath: Assets\StreamingAssets.meta
+          originalPath: 
+          indexStatus: 1
+          workTreeStatus: 1
+      - path: ProjectSettings
+        label: ProjectSettings
+        level: 0
+        isFolder: 1
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: 
+          fullPath: 
+          projectPath: 
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 0
+      - path: ProjectSettings\ProjectSettings.asset
+        label: ProjectSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: ProjectSettings\ProjectSettings.asset
+          fullPath: F:\UnityGames\Navidad\Navidad\ProjectSettings\ProjectSettings.asset
+          projectPath: ProjectSettings\ProjectSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: UserSettings
         label: UserSettings
         level: 0
@@ -1796,6 +3747,24 @@ MonoBehaviour:
           originalPath: 
           indexStatus: 0
           workTreeStatus: 0
+      - path: UserSettings\EditorUserSettings.asset
+        label: EditorUserSettings.asset
+        level: 1
+        isFolder: 0
+        isContainer: 0
+        isCollapsed: 0
+        isHidden: 0
+        isActive: 0
+        treeIsCheckable: 1
+        checkState: 0
+        isLocked: 0
+        gitStatusEntry:
+          path: UserSettings\EditorUserSettings.asset
+          fullPath: F:\UnityGames\Navidad\Navidad\UserSettings\EditorUserSettings.asset
+          projectPath: UserSettings\EditorUserSettings.asset
+          originalPath: 
+          indexStatus: 0
+          workTreeStatus: 3
       - path: UserSettings\Layouts
         label: Layouts
         level: 1
@@ -1852,21 +3821,280 @@ MonoBehaviour:
           indexStatus: 0
           workTreeStatus: 0
     gitStatusEntries:
+    - path: Assets\Resources\Flying eye (luizmelo itch)\Effects.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+        itch)\Effects.meta
+      projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+        itch)\Effects\hurt_004.wav
+      projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+        itch)\Effects\hurt_004.wav.meta
+      projectPath: Assets\Resources\Flying eye (luizmelo itch)\Effects\hurt_004.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+        itch)\Prefabs\MonsterFast.prefab
+      projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterFast.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+        itch)\Prefabs\MonsterNormal.prefab
+      projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterNormal.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Flying eye (luizmelo
+        itch)\Prefabs\MonsterTank.prefab
+      projectPath: Assets\Resources\Flying eye (luizmelo itch)\Prefabs\MonsterTank.prefab
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\Icon.png
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Icon.png
+      projectPath: Assets\Resources\Icon.png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Icon.png.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Icon.png.meta
+      projectPath: Assets\Resources\Icon.png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare 28
+        - Track 8.wav
+      projectPath: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare 28
+        - Track 8.wav.meta
+      projectPath: Assets\Resources\Music\Ludum Dare 28 - Track 8.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare 38
+        - Track 5.wav
+      projectPath: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Music\Ludum Dare 38
+        - Track 5.wav.meta
+      projectPath: Assets\Resources\Music\Ludum Dare 38 - Track 5.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\UI\Fonts\Capture it SDF.asset
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Capture it
+        SDF.asset
+      projectPath: Assets\Resources\UI\Fonts\Capture it SDF.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Chomsky SDF.asset
+      projectPath: Assets\Resources\UI\Fonts\Chomsky SDF.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil Empire
+        SDF.asset
+      projectPath: Assets\Resources\UI\Fonts\Evil Empire SDF.asset
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\UI\Fonts\Evil Empire SDF.asset.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil Empire
+        SDF.asset.meta
+      projectPath: Assets\Resources\UI\Fonts\Evil Empire SDF.asset.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\UI\Fonts\Evil Empire.otf
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil Empire.otf
+      projectPath: Assets\Resources\UI\Fonts\Evil Empire.otf
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\UI\Fonts\Evil Empire.otf.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\Fonts\Evil Empire.otf.meta
+      projectPath: Assets\Resources\UI\Fonts\Evil Empire.otf.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\UI\status frame(ege).png
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\status frame(ege).png
+      projectPath: Assets\Resources\UI\status frame(ege).png
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\UI\status frame(ege).png.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\UI\status frame(ege).png.meta
+      projectPath: Assets\Resources\UI\status frame(ege).png.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects.meta
+      projectPath: Assets\Resources\Warrior\Effects.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\death_4_karen.wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\death_4_karen.wav
+      projectPath: Assets\Resources\Warrior\Effects\death_4_karen.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+      projectPath: Assets\Resources\Warrior\Effects\death_4_karen.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+      projectPath: Assets\Resources\Warrior\Effects\grunting_1_karen.wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+      projectPath: Assets\Resources\Warrior\Effects\grunting_1_karen.wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+      projectPath: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+      projectPath: Assets\Resources\Warrior\Effects\grunting_8_meghan(salto).wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+      projectPath: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+      projectPath: Assets\Resources\Warrior\Effects\grunting_9_meghan(dash).wav.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: Assets\Scenes\GameplayScene.unity
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scenes\GameplayScene.unity
+      projectPath: Assets\Scenes\GameplayScene.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scenes\MainMenu.unity
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scenes\MainMenu.unity
+      projectPath: Assets\Scenes\MainMenu.unity
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\GameController.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\GameController.cs
+      projectPath: Assets\Scripts\GameController.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\InputComponent.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\InputComponent.cs
+      projectPath: Assets\Scripts\InputComponent.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\MainMenu.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MainMenu.cs
+      projectPath: Assets\Scripts\MainMenu.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\MariDomingiGraphicsComponent.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MariDomingiGraphicsComponent.cs
+      projectPath: Assets\Scripts\MariDomingiGraphicsComponent.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\MonsterInputComponent.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\MonsterInputComponent.cs
+      projectPath: Assets\Scripts\MonsterInputComponent.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\PlayerInputComponent.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\PlayerInputComponent.cs
+      projectPath: Assets\Scripts\PlayerInputComponent.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\Scripts\Skeleton.cs
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\Scripts\Skeleton.cs
+      projectPath: Assets\Scripts\Skeleton.cs
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: Assets\StreamingAssets.meta
+      fullPath: F:\UnityGames\Navidad\Navidad\Assets\StreamingAssets.meta
+      projectPath: Assets\StreamingAssets.meta
+      originalPath: 
+      indexStatus: 1
+      workTreeStatus: 1
+    - path: ProjectSettings\ProjectSettings.asset
+      fullPath: F:\UnityGames\Navidad\Navidad\ProjectSettings\ProjectSettings.asset
+      projectPath: ProjectSettings\ProjectSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
+    - path: UserSettings\EditorUserSettings.asset
+      fullPath: F:\UnityGames\Navidad\Navidad\UserSettings\EditorUserSettings.asset
+      projectPath: UserSettings\EditorUserSettings.asset
+      originalPath: 
+      indexStatus: 0
+      workTreeStatus: 3
     - path: UserSettings\Layouts\default-2021.dwlt
       fullPath: F:\UnityGames\Navidad\Navidad\UserSettings\Layouts\default-2021.dwlt
       projectPath: UserSettings\Layouts\default-2021.dwlt
       originalPath: 
       indexStatus: 0
       workTreeStatus: 3
-    changedFilesText: 1 changed file
+    changedFilesText: 42 changed files
     lastCurrentBranchChangedEvent:
-      updatedTimeString: 2022-12-21T13:03:05.538+01:00
+      updatedTimeString: 2022-12-22T15:56:08.353+01:00
       cacheType: 1
     lastStatusEntriesChangedEvent:
-      updatedTimeString: 2022-12-21T13:52:48.392+01:00
+      updatedTimeString: 2022-12-22T16:02:21.008+01:00
       cacheType: 6
     lastLocksChangedEvent:
-      updatedTimeString: 2022-12-21T13:52:27.303+01:00
+      updatedTimeString: 2022-12-22T16:02:21.619+01:00
       cacheType: 7
   historyView:
     currentLogHasUpdate: 0
@@ -2082,13 +4310,13 @@ MonoBehaviour:
     m_Image: {fileID: 0}
     m_Tooltip: Url of the origin remote
   lastCurrentBranchAndRemoteChangedEvent:
-    updatedTimeString: 2022-12-21T08:53:54.272+01:00
+    updatedTimeString: 2022-12-22T13:13:49.154+01:00
     cacheType: 1
   lastTrackingStatusChangedEvent:
-    updatedTimeString: 2022-12-21T08:55:26.638+01:00
+    updatedTimeString: 2022-12-22T13:13:49.416+01:00
     cacheType: 5
   lastStatusEntriesChangedEvent:
-    updatedTimeString: 2022-12-21T08:55:26.612+01:00
+    updatedTimeString: 2022-12-22T13:17:00.171+01:00
     cacheType: 6
   pullButtonContent:
     m_Text: Pull
@@ -2106,7 +4334,7 @@ MonoBehaviour:
     m_Text: Fetch
     m_Image: {fileID: 0}
     m_Tooltip: 
-  repositoryProgressValue: 0.99604744
+  repositoryProgressValue: 0
   repositoryProgressMessage: 
   appManagerProgressValue: 1
   appManagerProgressMessage: 
@@ -2131,9 +4359,9 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 2026
+    x: 2029
     y: 73
-    width: 533
+    width: 530
     height: 1278
   m_ViewDataDictionary: {fileID: 0}
   m_OverlayCanvas:

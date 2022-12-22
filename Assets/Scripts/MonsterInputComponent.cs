@@ -30,10 +30,6 @@ public class MonsterInputComponent : InputComponent
         agent.SetDestination(targets[pos]);
     }
 
-    public override void FixedUpdate(Skeleton gameObject)
-    {
-        
-    }
 
     public override void Update(Skeleton gameObject)
     {

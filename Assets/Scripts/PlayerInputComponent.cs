@@ -12,13 +12,9 @@ public class PlayerInputComponent : InputComponent
     //We check the inputs every frame
     public override void Update(Skeleton gameObject)
     {
-        gameObject.inputHandler.HandleInput();
-    }
-    //Trying to make it more consistent, we execute the commands 50 times every second. If we did this in update, the follower movement can be inconsistent.
-    public override void FixedUpdate(Skeleton gameObject)
-    {
+        gameObject.inputHandler.HandleInput(); 
         commands = gameObject.inputHandler.ReturnInput();
-        while (commands[commandNumb] != null)
+        while (commandNumb < 10 && commands[commandNumb] != null)
         {
             commands[commandNumb].Execute(gameObject);
             commandNumb++;
