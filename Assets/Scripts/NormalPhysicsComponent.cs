@@ -8,7 +8,9 @@ public class NormalPhysicsComponent : PhysicsComponent
     //A mask determining what is ground to the character
     private LayerMask m_WhatIsGround = LayerMask.GetMask("Ground");
     //Radius of the overlap circle to determine if grounded
-    const float k_GroundedRadius = .2f;
+    const float k_GroundedRadius = .45f;
+    //Radius of the overlap circle to determine if it can get up
+    const float k_GetUpRadius = .25f;
     //Whether or not the player is grounded.
     public bool m_Grounded;
     //The last time the skeleton dashed
@@ -31,7 +33,7 @@ public class NormalPhysicsComponent : PhysicsComponent
             Collider2D[] colliders = Physics2D.OverlapCircleAll(gameObject.transform.GetChild(0).position, k_GroundedRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
-                if (colliders[i].gameObject != gameObject && gameObject.GetComponent<Rigidbody2D>().velocity.y == 0.0f)
+                if (colliders[i].gameObject != gameObject && Mathf.Abs(gameObject.GetComponent<Rigidbody2D>().velocity.y) < 0.01f)
                 {
                     m_Grounded = true;
                     gameObject.gravity = false;
@@ -42,7 +44,7 @@ public class NormalPhysicsComponent : PhysicsComponent
             }
             //We save when the skeleton can get up
             gameObject.SetCanGetUp(true);
-            colliders = Physics2D.OverlapCircleAll(gameObject.transform.GetChild(1).position, k_GroundedRadius, m_WhatIsGround);
+            colliders = Physics2D.OverlapCircleAll(gameObject.transform.GetChild(1).position, k_GetUpRadius, m_WhatIsGround);
             for (int i = 0; i < colliders.Length; i++)
             {
                 if (colliders[i].gameObject != gameObject)
@@ -90,6 +92,7 @@ public class NormalPhysicsComponent : PhysicsComponent
                     gameObject.GetComponent<Rigidbody2D>().gravityScale = 1.0f;
                 }
             }
+            //We let the player slide if they are crouching and dash
             if(gameObject.dash && gameObject.crouching && !gameObject.attacking && canDash && (Time.fixedTime - lastDash) > 0.5f)
             {
                 gameObject.EndCrouching();
@@ -97,6 +100,7 @@ public class NormalPhysicsComponent : PhysicsComponent
                 lastDash = Time.fixedTime;
                 canDash = false;
             }
+            //When the player is slideing the Y speed works the same as when they are not dashing. The slide is not capped.
             if (gameObject.slideing && (gameObject.dash || Time.fixedTime - lastDash <= 0.25f || !gameObject.canGetUp))
             {
                 gameObject.GetComponent<Rigidbody2D>().velocity = new Vector2(gameObject.lookingRight * 20.0f, velY);

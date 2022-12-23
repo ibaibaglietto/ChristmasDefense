@@ -69,7 +69,7 @@ public class InputHandler : MonoBehaviour
         attackKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("attack"));
         crouchKey = (KeyCode)System.Enum.Parse(typeof(KeyCode), PlayerPrefs.GetString("crouch"));
     }
-    //We save a maximum of 10 commands that will be sent every 1/50 seconds
+    //We save a maximum of 10 commands.
     public void HandleInput()
     {
         if (totalCommands < 10)

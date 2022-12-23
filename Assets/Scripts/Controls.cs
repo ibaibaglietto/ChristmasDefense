@@ -14,7 +14,7 @@ public class Controls : MonoBehaviour
     //The text that will appear when we are changing a button and the gameobject of the warning
     [SerializeField] private TextMeshProUGUI changeButtonText;
     [SerializeField] private GameObject changeButton;
-    //The buttons for the 5 controls that we can change
+    //The buttons for the 7 controls that we can change
     [SerializeField] private GameObject moveLeftImage;
     [SerializeField] private GameObject moveRightImage;
     [SerializeField] private GameObject jumpImage;
@@ -149,7 +149,7 @@ public class Controls : MonoBehaviour
                     if(GetType().GetField(kcode.ToString()) != null)
                     {
                         //When we know that we pressed a key we look that it isn't already used, and if so we asign the key to the command
-                        if (PlayerPrefs.GetString("moveLeft") != kcode.ToString() && PlayerPrefs.GetString("moveRight") != kcode.ToString() && PlayerPrefs.GetString("jump") != kcode.ToString() && PlayerPrefs.GetString("dash") != kcode.ToString() && PlayerPrefs.GetString("pause") != kcode.ToString())
+                        if (PlayerPrefs.GetString("moveLeft") != kcode.ToString() && PlayerPrefs.GetString("moveRight") != kcode.ToString() && PlayerPrefs.GetString("jump") != kcode.ToString() && PlayerPrefs.GetString("dash") != kcode.ToString() && PlayerPrefs.GetString("pause") != kcode.ToString() && PlayerPrefs.GetString("attack") != kcode.ToString() && PlayerPrefs.GetString("crouch") != kcode.ToString())
                         {
                             var button = (Sprite)GetType().GetField(kcode.ToString()).GetValue(this);
                             if (action == 0)

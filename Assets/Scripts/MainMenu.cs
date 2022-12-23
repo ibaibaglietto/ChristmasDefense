@@ -119,6 +119,7 @@ public class MainMenu : MonoBehaviour
 
     void Start()
     {
+        //We lock the cursor on the window.
         Cursor.lockState = CursorLockMode.Confined;
         //We put the resolution time to 0
         resolutionTime = 0.0f;
@@ -324,11 +325,6 @@ public class MainMenu : MonoBehaviour
         //We play the menu music a bit delayed to wait to the sound settings to apply
         musicSource.PlayDelayed(0.2f);
     }
-    //A function to start a new game
-    public void NewGame()
-    {
-        SceneManager.LoadScene(1);
-    }
     void FixedUpdate()
     {
         //We check how much time has passed from the moment the player saved the resolution, if the player needs more than 10 seconds to confirm we return to the previous resolution
@@ -343,6 +339,12 @@ public class MainMenu : MonoBehaviour
             else if (PlayerPrefs.GetInt("language") == 1) returnText.text = "Volver (" + (10 - (int)(Time.fixedTime - resolutionTime)).ToString() + ")";
             else if (PlayerPrefs.GetInt("language") == 2) returnText.text = "Itzuli (" + (10 - (int)(Time.fixedTime - resolutionTime)).ToString() + ")";
         }
+    }
+
+    //A function to start a new game
+    public void NewGame()
+    {
+        SceneManager.LoadScene(1);
     }
 
     //Function to close the game
@@ -810,8 +812,8 @@ public class MainMenu : MonoBehaviour
             creditsTitleText.text = "Créditos";
             creditsReturnText.text = "Volver";
             howToPlayTitleText.text = "Cómo jugar";
-            howToPlayPage1.text = "En Christmas Defense tendras que ayudar a Mari Domingi a proteger el máximo tiempo posible los cofres que guardan los regalos para los niños.";
-            howToPlayPage2.text = "A romper estos cofres se acercarán varios enemigos: el marrón, 2 puntos de vida y velocidad normal; el azul, 3 puntos de vida y velocidad lenta; y el amarillo, único punto de vida y gran velocidad. Romperán los cofres según sus puntos de vida. A los enemigos solo les importan los cofres, a ti te ignorarán.";
+            howToPlayPage1.text = "En Christmas Defense tendrás que ayudar a Mari Domingi a proteger el máximo tiempo posible los cofres que guardan los regalos para los niños.";
+            howToPlayPage2.text = "A romper estos cofres se acercarán varios enemigos: el marrón, con 2 puntos de vida y velocidad normal; el azul, con 3 puntos de vida y velocidad lenta; y el amarillo, con un único punto de vida y gran velocidad. Romperán los cofres según sus puntos de vida. A los enemigos solo les importan los cofres, a ti te ignorarán.";
             howToPlayPage3.text = "Para moverte podrás usar los saltos y las embestidas además del movimiento normal. Si usas la embestida mientras estas agachado podrás deslizarte. Además, este movimiento no tiene límites, ¡muévete de una punta de la pantalla a la otra deslizándote!";
             howToPlayPage4.text = "Para acabar con los enemigos puedes atacarles con tu espada. Normalmente puedes atacar dos veces, quitando un punto de vida con cada ataque, pero si atacas mientras estas embistiendo usarás el ataque de embestida, el cual quita dos puntos de vida. ¡Piensa bien que ataque quieres utilizar!";
             howToPlayPage5.text = "Puedes parar el juego en cualquier momento, luego continuándolo, reiniciando o regresando al menú principal.";

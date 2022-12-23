@@ -5,14 +5,12 @@ using UnityEngine;
 //We will use the component pattern to create a skeleton that both the player and the follower can use
 public class Skeleton : MonoBehaviour
 {
+    //The components
     private InputComponent input;
     private PhysicsComponent physics;
     private GraphicsComponent graphics;
     public InputHandler inputHandler;
-    //The prefab of the dash and the gameobject where we are going to save it
-    [SerializeField] private GameObject dashPrefab;
     private GameController gameController;
-    private GameObject shadow;
     //The public variables that the components will need
     public bool isPlayer;
     public bool jump = false;
@@ -125,6 +123,21 @@ public class Skeleton : MonoBehaviour
     {
         crouch = false;
     }
+
+    public void StartAttack()
+    {
+        if (!waiting)
+        {
+            attack = true;
+            storedAttack = true;
+        }
+    }
+    public void EndAttack()
+    {
+        attack = false;
+    }
+
+    //Functions to set when the player is actually crouching
     public void Crouching()
     {
         crouching = true;
@@ -133,11 +146,12 @@ public class Skeleton : MonoBehaviour
     {
         crouching = false;
     }
+    //Functions to set when the player ends dashing
     public void StopDashing()
     {
         dashing = false;
     }
-
+    //Functions to deal damage to the monsters and to end the damage.
     public void StartDamage(int d)
     {
         if (!isPlayer)
@@ -147,11 +161,12 @@ public class Skeleton : MonoBehaviour
         }
         takeDamage = true;
     }
-
     public void EndDamage()
     {
         takeDamage = false;
     }
+
+    //Functions to start and end the taking damage state.
     public void StartTakingDamage()
     {
         takingDamage = true;
@@ -161,32 +176,20 @@ public class Skeleton : MonoBehaviour
     {
         takingDamage = false;
     }
-    public void StartAttack()
-    {
-        if (!waiting)
-        {
-            attack = true;
-            storedAttack = true;
-        }
-    }
+    
 
-    public void EndAttack()
-    {
-        attack = false;
-    }
-
+    //Functions to set when the skeleton is actually attacking
     public void StartAttacking()
     {
         attacking = true;
         storedAttack = false;
     }
-
-
     public void EndAttacking()
     {
         attacking = false;
     }
 
+    //When the player alt tabs we reset all the commands.
     private void OnApplicationFocus(bool focus)
     {
         if(isPlayer && !focus)
@@ -198,7 +201,7 @@ public class Skeleton : MonoBehaviour
             speed = 0.0f;
         }
     }
-
+    //Function to deal damage to the chests.
     public void DealDamage(int d)
     {
         gameObject.GetComponent<AudioSource>().clip = attackClip;
@@ -222,21 +225,4 @@ public class Skeleton : MonoBehaviour
         Destroy(gameObject);
     }
 
-    //A function to create shadows when a skeleton dashes
-    public void CreateDashShadow()
-    {
-        shadow = Instantiate(dashPrefab, transform.position, transform.rotation);
-        if (lookingRight != 1)
-        {
-            Vector3 theScale = shadow.transform.localScale;
-            theScale.x *= -1;
-            shadow.transform.localScale = theScale;
-        }
-        else
-        {
-            Vector3 theScale = shadow.transform.localScale;
-            theScale.x *= 1;
-            shadow.transform.localScale = theScale;
-        }
-    }
 }

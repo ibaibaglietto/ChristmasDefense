@@ -39,7 +39,7 @@ public class GameController : MonoBehaviour
     private KeyCode pauseKey;
     void Start()
     {
-        //We make the cursor invisible, because we don't need it when we are playing
+        //We make the cursor invisible, because we don't need it when we are playing. We also lock it on the window.
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Confined;
         //We change the camera size depending on the resolution
@@ -91,9 +91,10 @@ public class GameController : MonoBehaviour
         pauseMenu.SetActive(false);
     }
 
-    // Update is called once per frame
+
     void Update()
     {
+        //We show a countdown to the player
         if (starting)
         {
             if (Time.fixedTime - startTime < 3.0f)
@@ -110,7 +111,7 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            //We pause or unpause the game when the pause key is pressed, putting the player and the followers in waiting state. When the game is paused, we make the cursor visible.
+            //We pause or unpause the game when the pause key is pressed, putting the player in waiting state. When the game is paused, we make the cursor visible.
             if (Input.GetKeyDown(pauseKey) && !gameEnded)
             {
                 paused = !paused;
@@ -121,7 +122,9 @@ public class GameController : MonoBehaviour
             }
             if (!paused)
             {
+                //We save the time that has passed while playing to show it to the player.
                 timeNumb.text = ((int)(Time.fixedTime - startTime)).ToString();
+                //We want to make the game more challenging the more time the player survives, so we change the spawn time and the enemies that can spawn depending on the time that has passed.
                 if (Time.fixedTime - startTime < 24.0f)
                 {
                     if ((Time.fixedTime - lastMonster) > 6f)
@@ -171,9 +174,10 @@ public class GameController : MonoBehaviour
         }        
     }
 
+    //We pause the game when the player alt tabs.
     private void OnApplicationFocus(bool focus)
     {
-        if(!focus && !paused)
+        if(!focus && !paused && !starting)
         {            
             paused = !paused;
             Cursor.visible = paused;
@@ -207,6 +211,7 @@ public class GameController : MonoBehaviour
         player.SetWait(paused);
     }
 
+    //A function to deal damage to the chests. When it reaches 0 the game ends.
     public void DealDamage(int d)
     {
         if (!gameEnded)

@@ -82,6 +82,12 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         gameObject.StartAttacking();
                         state = State.STATE_ATTACKING1_RIGHT;
                     }
+                    else if (gameObject.falling)
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("isFalling", true);
+                        gameObject.GetComponent<Animator>().SetBool("isJumping", false);
+                        state = State.STATE_FALLING_RIGHT;
+                    }
                     else if (gameObject.jump)
                     {
                         if (gameObject.isPlayer)
@@ -91,12 +97,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         }
                         gameObject.GetComponent<Animator>().SetBool("isJumping", true);
                         state = State.STATE_JUMPING_RIGHT;
-                    }
-                    else if (gameObject.falling)
-                    {
-                        gameObject.GetComponent<Animator>().SetBool("isFalling", true);
-                        gameObject.GetComponent<Animator>().SetBool("isJumping", false);
-                        state = State.STATE_FALLING_RIGHT;
                     }
                     else if (gameObject.speed < -0.1f)
                     {
@@ -154,6 +154,12 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         gameObject.StartAttacking();
                         state = State.STATE_ATTACKING1_LEFT;
                     }
+                    else if (gameObject.falling)
+                    {
+                        gameObject.GetComponent<Animator>().SetBool("isFalling", true);
+                        gameObject.GetComponent<Animator>().SetBool("isJumping", false);
+                        state = State.STATE_FALLING_LEFT;
+                    }
                     else if (gameObject.jump)
                     {
                         if (gameObject.isPlayer)
@@ -163,12 +169,6 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         }
                         gameObject.GetComponent<Animator>().SetBool("isJumping", true);
                         state = State.STATE_JUMPING_LEFT;
-                    }
-                    else if (gameObject.falling)
-                    {
-                        gameObject.GetComponent<Animator>().SetBool("isFalling", true);
-                        gameObject.GetComponent<Animator>().SetBool("isJumping", false);
-                        state = State.STATE_FALLING_LEFT;
                     }
                     else if (gameObject.speed < -0.1f)
                     {
@@ -531,6 +531,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                             gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
                             gameObject.GetComponent<AudioSource>().Play();
                         }
+                        gameObject.falling = true;
                         gameObject.GetComponent<Animator>().SetBool("isDashing", true);
                         gameObject.GetComponent<Animator>().SetBool("isJumping", false);
                         state = State.STATE_DASHING_RIGHT;
@@ -589,6 +590,7 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                             gameObject.GetComponent<AudioSource>().clip = gameObject.dashClip;
                             gameObject.GetComponent<AudioSource>().Play();
                         }
+                        gameObject.falling = true;
                         gameObject.GetComponent<Animator>().SetBool("isDashing", true);
                         gameObject.GetComponent<Animator>().SetBool("isJumping", false);
                         state = State.STATE_DASHING_LEFT;
@@ -650,8 +652,9 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         gameObject.GetComponent<Animator>().SetBool("isDashing", true);
                         state = State.STATE_DASHING_RIGHT;
                     }
-                    else if (!gameObject.falling)
+                    else if (!gameObject.falling || !gameObject.onAir)
                     {
+                        gameObject.falling = false;
                         gameObject.GetComponent<Animator>().SetBool("isFalling", false);
                         gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                         state = State.STATE_IDLE_RIGHT;
@@ -702,8 +705,9 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                         gameObject.GetComponent<Animator>().SetBool("isDashing", true);
                         state = State.STATE_DASHING_LEFT;
                     }
-                    else if (!gameObject.falling)
+                    else if (!gameObject.falling || !gameObject.onAir)
                     {
+                        gameObject.falling = false;
                         gameObject.GetComponent<Animator>().SetBool("isFalling", false);
                         gameObject.GetComponent<Animator>().SetBool("isMoving", false);
                         state = State.STATE_IDLE_LEFT;
@@ -738,11 +742,8 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     else if (!gameObject.dashing)
                     {
                         gameObject.GetComponent<Animator>().SetBool("isDashing", false);
-                        if (!gameObject.falling)
-                        {
-                            gameObject.GetComponent<Animator>().SetBool("isFalling", false);
-                            gameObject.GetComponent<Animator>().SetBool("isMoving", false);
-                        }
+                        gameObject.GetComponent<Animator>().SetBool("isMoving", false);
+                        gameObject.GetComponent<Animator>().SetBool("isFalling", false); 
                         state = State.STATE_IDLE_RIGHT;
                     }
                     else if (gameObject.storedAttack)
@@ -778,11 +779,8 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     else if (!gameObject.dashing)
                     {
                         gameObject.GetComponent<Animator>().SetBool("isDashing", false);
-                        if (!gameObject.falling)
-                        {
-                            gameObject.GetComponent<Animator>().SetBool("isFalling", false);
-                            gameObject.GetComponent<Animator>().SetBool("isMoving", false);
-                        }
+                        gameObject.GetComponent<Animator>().SetBool("isMoving", false);
+                        gameObject.GetComponent<Animator>().SetBool("isFalling", false); 
                         state = State.STATE_IDLE_LEFT;
                     }
                     else if (gameObject.storedAttack)
@@ -818,11 +816,8 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     else if (!gameObject.attacking)
                     {
                         gameObject.GetComponent<Animator>().SetBool("isDashAttacking", false);
-                        if (!gameObject.falling)
-                        {
-                            gameObject.GetComponent<Animator>().SetBool("isFalling", false);
-                            gameObject.GetComponent<Animator>().SetBool("isMoving", false);
-                        }
+                        gameObject.GetComponent<Animator>().SetBool("isMoving", false);
+                        gameObject.GetComponent<Animator>().SetBool("isFalling", false); 
                         state = State.STATE_IDLE_RIGHT;
                     }
                 }                    
@@ -849,11 +844,8 @@ public class MariDomingiGraphicsComponent : GraphicsComponent
                     else if (!gameObject.attacking)
                     {
                         gameObject.GetComponent<Animator>().SetBool("isDashAttacking", false);
-                        if (!gameObject.falling)
-                        {
-                            gameObject.GetComponent<Animator>().SetBool("isFalling", false);
-                            gameObject.GetComponent<Animator>().SetBool("isMoving", false);
-                        }
+                        gameObject.GetComponent<Animator>().SetBool("isMoving", false); 
+                        gameObject.GetComponent<Animator>().SetBool("isFalling", false); 
                         state = State.STATE_IDLE_LEFT;
                     }
                 }                    

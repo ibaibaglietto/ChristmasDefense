@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MonsterGraphicsComponent : GraphicsComponent
 {
-
+    //The states of the state machine that we will follow
     enum State
     {
         STATE_FLY_RIGHT,
@@ -19,6 +19,7 @@ public class MonsterGraphicsComponent : GraphicsComponent
     //The starting state
     private State state = State.STATE_FLY_RIGHT;
 
+    //We built a state machine to send the correct variables to the animator and to play the correct sounds when the state changes.
     public override void Update(Skeleton gameObject)
     {
         switch (state)
